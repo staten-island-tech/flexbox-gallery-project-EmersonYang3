@@ -1,0 +1,180 @@
+/* Import custom font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset everything or else I'll reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #E3FDFD, #A6E3E9);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Adjust for footer idk */
+}
+
+.title-card {
+    margin: 20px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%; 
+    max-width: 1500px;
+}
+
+.card {
+    background-color: #CBF1F5;
+    border: 2px solid #71C9CE;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.2em;
+    color: #71C9CE;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover p {
+    color: #CBF1F5;
+    background-color: rgba(113, 201, 206, 0.8);
+}
+
+/* Unique hover effects or else Ill have unique hover effects*/
+.card:nth-child(1):hover {
+    transform: rotate(5deg);
+}
+
+.card:nth-child(2):hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.card:nth-child(3):hover {
+    transform: translateY(-10px);
+}
+
+.card:nth-child(4):hover {
+    transform: scale(1.1) translateX(10px);
+}
+
+.card:nth-child(5):hover {
+    transform: skewX(10deg);
+}
+
+.card:nth-child(6):hover {
+    transform: scale(1.1) skewY(10deg);
+}
+
+.card:nth-child(7):hover {
+    transform: rotateY(360deg);
+}
+
+.card:nth-child(8):hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+.card:nth-child(9):hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Lowkey put random ahh hovers */
+
+/* Animation stuff idk */
+@keyframes fadeIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Slide-in animation for title card */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive design (does this even work bro) */
+@media (max-width: 1200px) {
+    .card {
+        height: 500px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 400px;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #71C9CE;
+    color: white;
+    font-size: 1em;
+    padding: 10px 0;
+}
