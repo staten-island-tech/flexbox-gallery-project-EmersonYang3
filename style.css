@@ -27,7 +27,7 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     justify-content: space-between;
     align-items: center;
@@ -85,7 +85,7 @@ body {
 
 .card:hover p {
     color: #CBF1F5;
-    background-color: rgba(113, 201, 206, 0.8);
+    background-color: rgba(36, 175, 182, 0.8);
 }
 
 /* Unique hover effects or else Ill have unique hover effects*/
