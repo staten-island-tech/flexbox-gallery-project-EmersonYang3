@@ -155,6 +155,17 @@ body {
     }
 }
 
+footer {    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #71C9CE;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
 /* Responsive design (does this even work bro) */
 @media (max-width: 1200px) {
     .card {
@@ -168,13 +179,3 @@ body {
     }
 }
 
-footer {    
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #71C9CE;
-    color: white;
-    font-size: 1rem;
-    padding: 1rem 0;
-}
