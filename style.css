@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -34,6 +39,7 @@ body {
     padding: 2rem;
     width: 100%; 
     max-width: 1500px;
+    margin: 0 auto; /* Center the gallery */
 }
 
 .card {
@@ -178,4 +184,3 @@ footer {
         height: 25rem;
     }
 }
-
