@@ -26,8 +26,15 @@ body {
 }
 
 .title-card {
+    width: 80%;
+    max-width: 600px;
     margin: 20px 0;
     animation: slideIn 1s ease-in-out;
+}
+
+.title-card img {
+    width: 100%;
+    height: auto;
 }
 
 .gallery {
